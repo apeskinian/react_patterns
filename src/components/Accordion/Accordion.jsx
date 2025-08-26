@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import AccordionItem from "./AccordionItem";
+import AccordionTitle from "./AccordionTitle";
+import AccordionContent from "./AccordionContent";
 // creating the context item
 const AccordionContext = createContext();
 
@@ -36,5 +38,7 @@ export default function Accordion({ children, className }) {
     );
 }
 
-// stating that the Accordion.Item is compounded with the Accordion
+// stating that the Accordion below items are compounded with the Accordion
 Accordion.Item = AccordionItem
+Accordion.Title = AccordionTitle
+Accordion.Content = AccordionContent
